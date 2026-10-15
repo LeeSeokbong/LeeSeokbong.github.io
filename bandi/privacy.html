@@ -49,7 +49,7 @@
     <ul>
       <li>회원가입·로그인이 <strong>없습니다.</strong> 운영자는 서버를 운영하지 않습니다.</li>
       <li>반디와 나눈 대화, 가르친 말, 반디의 기억은 <strong>휴대폰 안에서만</strong> 처리·저장되며 운영자에게 전송되지 않습니다.</li>
-      <li>AI 모델은 처음 한 번 Hugging Face에서 내려받습니다. 이때 내 IP 주소가 Hugging Face와 그 전송망(CDN)에 보입니다.</li>
+      <li>AI 모델(약 2.6GB)은 이용자가 받기를 고른 경우에만 Hugging Face에서 내려받습니다(기본 설정은 Wi-Fi에서만). 이때 내 IP 주소가 Hugging Face와 그 전송망(CDN)에 보입니다.</li>
       <li>보상형 광고를 위해 Google AdMob이 광고 ID 등 기기 정보를 수집합니다.</li>
       <li>운영자가 받는 정보는 이용자가 <strong>스스로 보낸 AI 문장 신고</strong>(앱 안에서 Google 설문지로 접수)와 <strong>문의 이메일</strong>뿐입니다. 신고할 때 이름이나 이메일 주소는 받지 않습니다.</li>
     </ul>
@@ -106,7 +106,7 @@
   Google 개인정보처리방침: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
 
   <h2>5. AI 모델 내려받기 (Hugging Face)</h2>
-  <p>이용자가 받기를 시작하면 앱은 Hugging Face(Hugging Face, Inc., 미국)의 공개 저장소에서 AI 모델 파일(약 2.6GB)을 내려받습니다. 이때 일반적인 인터넷 통신과 마찬가지로 이용자의 IP 주소와 기기를 식별하지 않는 앱 이름 문자열("Bandi-Android")이 Hugging Face와 그 전송망(CDN)에 전달되며, 이들 회사의 정책에 따라 기록될 수 있습니다. 운영자는 이 기록을 받지 않습니다. 기본 설정은 Wi-Fi에서만 내려받기이며, 받지 않아도 게임은 할 수 있습니다.<br>
+  <p>앱은 처음 실행할 때 AI 모델을 받을지 묻습니다. 이용자가 받기를 고르면(또는 나중에 앱의 설정 &gt; 반디의 말에서 받기를 누르면) 앱은 Hugging Face(Hugging Face, Inc., 미국)의 공개 저장소에서 AI 모델 파일(약 2.6GB)을 내려받습니다. 이때 일반적인 인터넷 통신과 마찬가지로 이용자의 IP 주소와 기기를 식별하지 않는 앱 이름 문자열("Bandi-Android")이 Hugging Face와 그 전송망(CDN)에 전달되며, 이들 회사의 정책에 따라 기록될 수 있습니다. 운영자는 이 기록을 받지 않습니다. 기본 설정은 Wi-Fi에서만 내려받기이며, 받지 않아도 게임은 할 수 있습니다. 받는 동안에는 앱을 닫아도 "반디 말 배우는 중" 알림을 띄운 채 계속 받고(Android 작업 관리자 WorkManager, 데이터 동기화 포그라운드 서비스), 끊기면 Wi-Fi가 연결될 때 받던 곳부터 이어 받습니다. 알림이나 설정의 [멈추기]를 누르면 더 받지 않습니다. Wi-Fi인지 모바일 데이터인지, 저장 공간이 넉넉한지는 휴대폰 안에서만 확인하며 어디에도 보내지 않습니다.<br>
   Hugging Face 개인정보처리방침: <a href="https://huggingface.co/privacy">huggingface.co/privacy</a></p>
 
   <h2>6. 백업 (Android 자동 백업)</h2>
